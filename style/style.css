@@ -1,0 +1,179 @@
+/*
+Syntax of CSS
+Property : Values
+values are predefined and defined
+
+property can be size colour font etc
+
+How to link CSS in html
+3 ways - 
+Inline - inside the html file in the tag we can give an attribute called style that css for that
+External
+Internal
+eg shown in index.html top part
+*/
+
+/* for external example */
+h3 {
+  color: brown;
+}
+
+/*
+Selectors in CSS
+like h1, p, span
+h1, p, span{ // combined selectors
+    // writing properties
+    color : black;
+    etc
+}
+
+Type selectors
+Diff elements have diff tag names like h1 h2 p etc
+To select those we have to write that tag name
+
+Class selector
+<h1 class="className"
+
+.className{
+    property:value;
+}
+
+id selector
+<h1 id="idName"
+
+#idName{
+    property:value;
+}
+
+Attribute selector
+<a href="www.something.com">
+
+a[href="www.something.com"]{
+    property:value;
+}
+
+pseudo class selector 
+A pseudo-class is used to define a special state of an element.
+used to style states of element
+states are - hover, visited, link,  etc many more.
+
+selector:pseudo-class {
+  property: value;
+}
+eg 
+p::first-line{ //changes the color of the first line of paragraph
+    color:brown;
+}
+
+Combinator selector (in the article tag there are many other tags present like h1, p, span, div, etc
+So to just select the p tag we can write
+
+article > p{
+    property:value;
+}
+
+Universal selector, * used to select everything
+
+*{
+    property:value;
+}
+*/
+
+/*element selector*/
+p {
+  color: chartreuse;
+}
+
+a:hover {
+  color: coral;
+}
+/*Way of showing list is point(disc) changing that*/
+li {
+  list-style-type: square; /*changed to square, we are selecting li so all the li elements will be changed*/
+}
+
+/*class selector*/
+.special {
+  color: darkorange;
+  font-size: larger;
+}
+ol.special {
+  color: darkturquoise;
+  font-size: larger;
+}
+p em {
+  /*decendant combinator*/
+  color: maroon; /*chnages color of this is emphasize*/
+}
+
+/*This is also call adjacent selector*/
+h6 + p {
+  /*selecting p tag which is just after h6, if anything is between then this wont work*/
+  color: mediumblue;
+}
+body h1 i {
+  /*Changes the i tag in h1 tag under body*/
+  color: mediumpurple;
+  background-color: palegoldenrod;
+  padding: 5px;
+}
+
+/*id selector*/
+#para {
+  color: red;
+  background-color: black;
+}
+
+#one {
+  color: darkgreen;
+  background-color: darkgoldenrod;
+}
+li[class] {
+  font-size: 300%;
+}
+li[class="a"] {
+  color: red;
+}
+
+li[class~="a"] {
+  /*selects all the class a and changes*/
+  font-style: italic;
+}
+
+* {
+  /*Selects all tag (*) and changes its font*/
+  font-family: monospace;
+}
+
+/*
+Now we learn about properties of css - 
+
+Color, background color, border-color 
+RGBA A is opacity
+Hexa decimal #RRGGBB, intensity 0-FF
+
+more in color.html
+
+
+Background property
+image, color
+more in background.html
+*/
+
+/* Now table styling */
+table,
+th,
+td {
+  border: 2px solid black;
+  border-collapse: collapse; /*Combines the cell border*/
+  padding: 10px;
+  border-spacing: 5px;
+}
+
+th {
+    background-color: coral;
+}
+
+td {
+    background-color: cornflowerblue;
+}
